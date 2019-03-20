@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - name: copy file to s3
+      s3_sync:
+        bucket: "{{ bucket_name }}"
+        file_root: "./s3"
+        mode: push
+        file_change_strategy: date_size
