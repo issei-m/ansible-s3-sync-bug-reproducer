@@ -5,5 +5,6 @@
       s3_sync:
         bucket: "{{ bucket_name }}"
         file_root: "./s3"
+        key_prefix: "/"
         mode: push
         file_change_strategy: date_size
